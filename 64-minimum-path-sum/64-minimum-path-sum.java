@@ -8,11 +8,8 @@ class Solution {
         
         we can not do this because it'll give us path of max sum
         */
-        /*
-            Solution
+        /*  Solution
             dp[i][j] = grid[i][j] + min(dp[i-1][j],dp[i][j-1]);
-            
-            
         */
         if(grid==null || grid.length==0 || grid[0].length==0)
             return 0;
