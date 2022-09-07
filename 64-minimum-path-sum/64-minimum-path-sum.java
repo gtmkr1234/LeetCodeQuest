@@ -4,8 +4,7 @@ class Solution {
         /*
             1 3 1
             1 5 1
-            4 2 1 
-            we can not do this because it'll give us path of max sum
+            4 2 1 we can not do this because it'll give us path of max sum
         */
         /*  Solution
             dp[i][j] = grid[i][j] + min(dp[i-1][j],dp[i][j-1]);
