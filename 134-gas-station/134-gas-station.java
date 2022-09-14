@@ -10,8 +10,7 @@ class Solution {
             if(curr<0){
                 curr=0;
                 pos = i;
-            }
-            
+            }    
         }
         if(sum>=0)
                 return pos+1;
