@@ -20,9 +20,8 @@ class Solution {
         return list;
     }
     public static void levelorder(ArrayList<List<Integer>> list, TreeNode root, int level){
-        if(root==null){
-            return;
-        }
+        if(root==null)
+        return;
         if(list.size()<=level){
             LinkedList<Integer> newlevel = new LinkedList<>();
             list.add(newlevel);
