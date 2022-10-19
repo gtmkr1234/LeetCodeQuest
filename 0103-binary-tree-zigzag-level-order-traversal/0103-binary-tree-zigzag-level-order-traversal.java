@@ -15,24 +15,24 @@
  */
 class Solution {
     public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
-        ArrayList<List<Integer>> list = new ArrayList<>();
-        levelorder(list, root, 0);
+        List <List<Integer>> list = new ArrayList<>();
+        levelorder(list, root,0);
         return list;
     }
-    public static void levelorder(ArrayList<List<Integer>> list, TreeNode root, int level){
-        if(root==null)
-        return;
+    private void levelorder(List <List<Integer>> list,TreeNode root, int level){
+        if(root==null) 
+            return;
         if(list.size()<=level){
-            LinkedList<Integer> newlevel = new LinkedList<>();
-            list.add(newlevel);
+            LinkedList<Integer> newLevel = new LinkedList<>();
+            list.add(newLevel);
         }
-        if(level%2==0){
+        if(level%2 == 0){
             list.get(level).add(root.val);
         }
         else{
-            list.get(level).add(0,root.val);
+            list.get(level).add(0, root.val);
         }
-        levelorder(list,root.left,level+1);
-        levelorder(list,root.right,level+1);
+        levelorder(list, root.left, level+1);
+        levelorder(list, root.right, level+1);
     }
 }
