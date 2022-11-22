@@ -4,7 +4,7 @@ class Solution {
         for(int i=0; i<(nums.length); i++){
             int n = Math.abs(nums[i]);
             if(nums[n-1]<0){
-                res.add(Math.abs(nums[i]));
+                res.add(n);
             }
             else{
                 nums[n-1] = -1*nums[n-1];
