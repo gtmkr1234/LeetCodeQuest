@@ -1,17 +1,12 @@
-class Solution {
-    public int lengthOfLongestSubstring(String s) {
-        HashMap<Character, Integer> maps = new HashMap<>();
-        int left=0, right = 0, n = s.length();
-        int len=0;
-        int max = 0;
-        while(right < n){
-            if(maps.containsKey(s.charAt(right)))
-                left = Math.max(left, maps.get(s.charAt(right))+1);
-            
-            maps.put(s.charAt(right), right);
-            len = Math.max(len, right-left+1);
-            right++;
-        }
-        return len;
-    }
-}
+class Solution:
+    def lengthOfLongestSubstring(self, s: str) -> int:
+        left=0
+        res = 0
+        hm = {}
+        for r in range(len(s)):
+            if s[r] in hm:
+                left = max(left, hm[s[r]]+1)
+            hm[s[r]] = r
+            res = max(res, r-left+1)
+        return res
+        
