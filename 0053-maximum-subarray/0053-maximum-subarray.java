@@ -1,6 +1,6 @@
 class Solution {
     public int maxSubArray(int[] nums) {
-        // Using Bruteforce with O(n^2)
+        // Using Kadane's Algo with Time Complexity O(n)
         
         int max = Integer.MIN_VALUE;
         int sum=0;
