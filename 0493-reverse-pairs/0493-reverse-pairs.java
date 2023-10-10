@@ -3,9 +3,7 @@ class Solution {
         ArrayList<Integer> temp = new ArrayList<>();
         int left = low;      
         int right = mid + 1;  
-
-
-
+        
         while (left <= mid && right <= high) {
             if (arr[left] <= arr[right]) {
                 temp.add(arr[left]);
@@ -16,13 +14,10 @@ class Solution {
             }
         }
 
-
-
         while (left <= mid) {
             temp.add(arr[left]);
             left++;
         }
-
 
         while (right <= high) {
             temp.add(arr[right]);
